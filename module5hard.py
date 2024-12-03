@@ -74,7 +74,8 @@ class UrTube:
 
                 else:
                     print(f'Просмотр видео {title}')
-                    while video.time_now < video.duration:
+                    video.time_now = 1
+                    while video.time_now <= video.duration:
                         print(video.time_now, end=' ')
                         sleep(1)
                         video.time_now += 1
